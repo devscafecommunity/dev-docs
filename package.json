@@ -1,0 +1,11 @@
+{
+  "name": "dev-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/devscafecommunity/dev-docs.git",
+  "author": "Pedro Kaleb! <73436445+LyeZinho@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "update": "node listpath.js"
+  }
+}

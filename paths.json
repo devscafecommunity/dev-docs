@@ -1,0 +1,13 @@
+{
+  "directories": [
+    {
+      "name": "history",
+      "path": "root\\history",
+      "content": {
+        "directories": [],
+        "files": []
+      }
+    }
+  ],
+  "files": []
+}
