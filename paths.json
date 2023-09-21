@@ -5,7 +5,12 @@
       "path": "root\\history",
       "content": {
         "directories": [],
-        "files": []
+        "files": [
+          {
+            "name": "test.txt",
+            "path": "root\\history\\test.txt"
+          }
+        ]
       }
     }
   ],
