@@ -4,6 +4,8 @@
         "path": "root\\history\\test.txt",
         "revision": 9,
         "description": "This is a test file",
-        "tags": ["test", "file"]
+        "tags": ["test", "file"],
+        "author": "test",
+        "image": "test.png"
     }
 ]

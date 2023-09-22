@@ -67,6 +67,8 @@ function makeFile( name, path ){
         revision: metadata.revision,
         description: metadata.description,
         tags: metadata.tags,
+        author: metadata.author,
+        image: metadata.image
     }
     return file;
 }
