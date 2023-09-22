@@ -9,11 +9,14 @@
           {
             "name": "test.txt",
             "path": "root\\history\\test.txt",
-            "lastModified": "2023-09-22T11:14:44.407Z",
+            "lastModified": "2023-09-22T12:37:07.347Z",
             "emmiter": "Pedro Kaleb! <73436445+LyeZinho@users.noreply.github.com>",
-            "revision": 0,
-            "description": "",
-            "tags": []
+            "revision": 9,
+            "description": "This is a test file",
+            "tags": [
+              "test",
+              "file"
+            ]
           }
         ]
       }

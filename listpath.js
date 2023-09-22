@@ -34,15 +34,39 @@ function getLocalRepoData(){
     return data;
 }
 
+function getMetadata( filename, path ){
+    /*
+    meta.json
+
+    find the corresponding file in the metadata folder
+    and return the metadata
+    [
+        {
+            "name": "test.json", <- searching data
+            "path": "root\\history\\test.json", <- searching data
+            
+            "revision": 0, <- metadata
+            "description": "", <- metadata
+            "tags": [] <- metadata
+        }
+    ]
+    */ 
+    let metadata = require('./meta.json');
+    let result = metadata.filter( file => file.name == filename && file.path == path );
+    return result[0];
+}
+
 function makeFile( name, path ){
+    let metadata = getMetadata( name, path );
+
     let file = {
         name: name,
         path: path,
         lastModified: new Date(),
         emmiter: getLocalRepoData().author,
-        revision: 0,
-        description: "",
-        tags: [],
+        revision: metadata.revision,
+        description: metadata.description,
+        tags: metadata.tags,
     }
     return file;
 }
