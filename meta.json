@@ -6,6 +6,6 @@
         "description": "This is a test file",
         "tags": ["test", "file"],
         "author": "test",
-        "image": "test.png"
+        "image": "https://via.placeholder.com/150x150"
     }
 ]
