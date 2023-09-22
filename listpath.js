@@ -4,6 +4,49 @@ const path = require('path');
 const rootDirectory = './root'; // Replace with the root directory path of your repository
 const jsonFilePath = 'paths.json';
 
+/*
+{
+  "directories": [
+    {
+      "name": "history",
+      "path": "root\\history",
+      "content": {
+        "directories": [],
+        "files": [
+          {
+            "name": "test.txt",
+            "path": "root\\history\\test.txt",
+            "lastModified": "2021-03-02T14:00:00.000Z", // This is made by the system when the script is run
+            "emmiter": "John Doe" // <- This is the author of the commit
+            "revision": "1" // <- This is the revision number of the commit
+            "description": "This is the description for the file" // <- This is the description written for metadata
+            "tags": ["tag1", "tag2"] // <- These are the tags written for metadata
+          }
+        ]
+      }
+    }
+  ],
+  "files": []
+}
+*/ 
+function getLocalRepoData(){
+    let data = require('./package.json');
+    return data;
+}
+
+function makeFile( name, path ){
+    let file = {
+        name: name,
+        path: path,
+        lastModified: new Date(),
+        emmiter: getLocalRepoData().author,
+        revision: 0,
+        description: "",
+        tags: [],
+    }
+    return file;
+}
+
 function generatePathData(directoryPath) {
     const items = fs.readdirSync(directoryPath);
 
@@ -24,8 +67,7 @@ function generatePathData(directoryPath) {
             });
         } else {
             pathData.files.push({
-                name: item,
-                path: itemPath,
+                ...makeFile(item, itemPath),
             });
         }
     }

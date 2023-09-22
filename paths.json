@@ -8,7 +8,12 @@
         "files": [
           {
             "name": "test.txt",
-            "path": "root\\history\\test.txt"
+            "path": "root\\history\\test.txt",
+            "lastModified": "2023-09-22T11:14:44.407Z",
+            "emmiter": "Pedro Kaleb! <73436445+LyeZinho@users.noreply.github.com>",
+            "revision": 0,
+            "description": "",
+            "tags": []
           }
         ]
       }
